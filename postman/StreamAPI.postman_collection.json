@@ -1,0 +1,1237 @@
+{
+	"info": {
+		"_postman_id": "7e3f2cec-dec2-45b8-978f-f24149645f50",
+		"name": "StreamAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "46444280"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "register",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "fullname",
+									"value": "five",
+									"type": "text"
+								},
+								{
+									"key": "username",
+									"value": "five",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "4567",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "five@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "avatar",
+									"type": "file",
+									"src": "/C:/Users/SHRUTI/Pictures/ScreenRecording/Screenshot 2025-07-15 223842.png"
+								},
+								{
+									"key": "coverImage",
+									"type": "file",
+									"src": "/C:/Users/SHRUTI/Pictures/ScreenRecording/Screenshot 2025-07-15 223500.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{server}}/users/register",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"users",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"three_3\",\r\n    \"email\":\"three@gmail.com\",\r\n    \"password\":\"3456\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server}}/users/login",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"users",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "logout",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server}}/users/logout",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"users",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "refresh-token",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server}}/users/refresh-token",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"users",
+								"refresh-token"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "change-password",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"oldPassword\":\"3456\",\r\n  \"newPassword\":\"6789\",\r\n  \"confirmPassword\":\"6789\"   \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server}}/users/change-password",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"users",
+								"change-password"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "current-user",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{server}}/users/current-user",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"users",
+								"current-user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateAccountDetails",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "three_333",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{server}}/users/updateAccountDetails",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"users",
+								"updateAccountDetails"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "avatar",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "avatar",
+									"type": "file",
+									"src": "/C:/Users/SHRUTI/Pictures/ScreenRecording/Screenshot 2025-07-15 221404.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{server}}/users/avatar",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"users",
+								"avatar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "cover-Image",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "coverImage",
+									"type": "file",
+									"src": "/C:/Users/SHRUTI/OneDrive/Pictures/Screenshots/Screenshot 2025-06-10 102315.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{server}}/users/cover-Image",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"users",
+								"cover-Image"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getUserChannel",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "histroy",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server}}/users/history",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"users",
+								"history"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Video",
+			"item": [
+				{
+					"name": "getAllVideos",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "videoFile",
+									"type": "file",
+									"src": "/C:/Users/SHRUTI/Videos/Screen Recordings/Screen Recording 2025-06-23 000316.mp4"
+								},
+								{
+									"key": "thumbnail",
+									"type": "file",
+									"src": "/C:/Users/SHRUTI/Pictures/ScreenRecording/Screenshot 2025-07-19 223528.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{server}}/videos/",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"videos",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "publishvideo",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "Project Video",
+									"type": "text"
+								},
+								{
+									"key": "videoFile",
+									"type": "file",
+									"src": "/C:/Users/SHRUTI/Videos/Screen Recordings/Screen Recording 2025-07-19 231518.mp4"
+								},
+								{
+									"key": "thumbnail",
+									"type": "file",
+									"src": "/C:/Users/SHRUTI/Pictures/ScreenRecording/Screenshot 2025-07-19 223528.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{server}}/videos/",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"videos",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getVideoById",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "description",
+									"value": "This is my first project video",
+									"type": "text"
+								},
+								{
+									"key": "videoFile",
+									"type": "file",
+									"src": "/C:/Users/SHRUTI/Videos/Screen Recordings/Screen Recording 2025-07-19 231518.mp4"
+								},
+								{
+									"key": "thumbnail",
+									"type": "file",
+									"src": "/C:/Users/SHRUTI/Pictures/ScreenRecording/Screenshot 2025-07-19 223528.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{server}}/videos/687bdb9585cee9f0c8c882d1",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"videos",
+								"687bdb9585cee9f0c8c882d1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateVideoDetails",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "thumbnail",
+									"type": "file",
+									"src": "/C:/Users/SHRUTI/Pictures/ScreenRecording/Screenshot 2025-07-15 191718.png"
+								},
+								{
+									"key": "title",
+									"value": "My first video upload",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "Thi is my journey to become backendDeveloper",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{server}}/videos/687bdb9585cee9f0c8c882d1",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"videos",
+								"687bdb9585cee9f0c8c882d1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteVideo",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{server}}/videos/687bdb9585cee9f0c8c882d1",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"videos",
+								"687bdb9585cee9f0c8c882d1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "togglePublishStatus",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{server}}/videos/toggle/publish/687bddce85cee9f0c8c882df",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"videos",
+								"toggle",
+								"publish",
+								"687bddce85cee9f0c8c882df"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Playlist",
+			"item": [
+				{
+					"name": "CreatePlaylist",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"My Project\",\r\n    \"description\":\"This playlist contain my all projects\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server}}/playlists/",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"playlists",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FindPlaylist",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{server}}/playlists/687be17331aa90176ceb9de2",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"playlists",
+								"687be17331aa90176ceb9de2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdatePlaylistDetails",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"My Backend Projects\",\r\n    \"description\":\"This is the journey of my backend developement\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server}}/playlists/687be17331aa90176ceb9de2",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"playlists",
+								"687be17331aa90176ceb9de2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "addVideo",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{server}}/playlists/add/687bddce85cee9f0c8c882df/687be17331aa90176ceb9de2",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"playlists",
+								"add",
+								"687bddce85cee9f0c8c882df",
+								"687be17331aa90176ceb9de2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "removeVideo",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "{{server}}/playlists/remove/687bddce85cee9f0c8c882df/687be17331aa90176ceb9de2",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"playlists",
+								"remove",
+								"687bddce85cee9f0c8c882df",
+								"687be17331aa90176ceb9de2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UserPlaylist",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server}}/playlists/user/687bc7332fee047464abff77",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"playlists",
+								"user",
+								"687bc7332fee047464abff77"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Likes",
+			"item": [
+				{
+					"name": "Liked Videos",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server}}/likes/687bc7332fee047464abff77",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"likes",
+								"687bc7332fee047464abff77"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Toggle VideoLike",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server}}/likes/toggle/v/687f3fee0e24b2eb79dc7216",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"likes",
+								"toggle",
+								"v",
+								"687f3fee0e24b2eb79dc7216"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Toggle TweetLike",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server}}/likes/toggle/t/687f3fee0e24b2eb79dc7216",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"likes",
+								"toggle",
+								"t",
+								"687f3fee0e24b2eb79dc7216"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Toggle CommentLike",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{server}}/likes/toggle/c/687f4f1d0377a60a3cfabbe9",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"likes",
+								"toggle",
+								"c",
+								"687f4f1d0377a60a3cfabbe9"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Tweet",
+			"item": [
+				{
+					"name": "Create tweet",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"content\":\"This is my first tweet..I really like the content\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server}}/tweets/",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"tweets",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User tweets",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server}}/tweets/user/687bc7332fee047464abff77",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"tweets",
+								"user",
+								"687bc7332fee047464abff77"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update tweet",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"content\":\"Amazing Video..Very Helpful\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server}}/tweets/687be598100325dfa159d224",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"tweets",
+								"687be598100325dfa159d224"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Tweet",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{server}}/tweets/687be598100325dfa159d224",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"tweets",
+								"687be598100325dfa159d224"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Subscription",
+			"item": [
+				{
+					"name": "Subscribed Channel",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server}}/subscriptions/c/687bc7332fee047464abff77",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"subscriptions",
+								"c",
+								"687bc7332fee047464abff77"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Channel Subscibers",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server}}/subscriptions/u/687bc7332fee047464abff77",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"subscriptions",
+								"u",
+								"687bc7332fee047464abff77"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Toggle Subscription",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server}}/subscriptions/c/687bc7332fee047464abff77",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"subscriptions",
+								"c",
+								"687bc7332fee047464abff77"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Comment",
+			"item": [
+				{
+					"name": "Add Comment",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"content\":\"Awsome Video\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server}}/comments/687f3fee0e24b2eb79dc7216",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"comments",
+								"687f3fee0e24b2eb79dc7216"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get VideoComment",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server}}/comments/687f3fee0e24b2eb79dc7216",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"comments",
+								"687f3fee0e24b2eb79dc7216"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Comment",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"content\":\"Amazing & Very helpful Video \"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server}}/comments/c/687f4109f1c8822329bc4e2c",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"comments",
+								"c",
+								"687f4109f1c8822329bc4e2c"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete Comment",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{server}}/comments/c/687f4109f1c8822329bc4e2c",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"comments",
+								"c",
+								"687f4109f1c8822329bc4e2c"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "DashBoard",
+			"item": [
+				{
+					"name": "Channel Videos",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "//Issue found check again \r\n\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server}}/dashboard/videos/687bc7332fee047464abff77",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"dashboard",
+								"videos",
+								"687bc7332fee047464abff77"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Channel Stat",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server}}/dashboard/stats/687bc7332fee047464abff77",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"dashboard",
+								"stats",
+								"687bc7332fee047464abff77"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "HealthCheck",
+			"item": [
+				{
+					"name": "Health Check",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"content\":\"Amazing Video..Very Helpful\"\r\n}"
+						},
+						"url": {
+							"raw": "{{server}}/healthcheck/",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"healthcheck",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
